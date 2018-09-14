@@ -1,0 +1,3 @@
+[submodule "mdacp"]
+	path = mdacp
+	url = https://github.com/kaityo256/mdacp.git
