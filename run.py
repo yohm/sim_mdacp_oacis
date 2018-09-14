@@ -66,9 +66,9 @@ def plot_figs(dat):
 plot_figs(dat)
 
 def print_json(dat):
-    avg_t = np.average(dat[-100:,1])
-    avg_p = np.average(dat[-100:,2])
-    avg_e = np.average(dat[-100:,3])
+    avg_t = np.average(dat[-200:,1])
+    avg_p = np.average(dat[-200:,2])
+    avg_e = np.average(dat[-200:,3])
     j = {"temperature": avg_t, "pressure": avg_p, "energy": avg_e}
     with open("_output.json", 'w') as f:
         json.dump(j, f)
