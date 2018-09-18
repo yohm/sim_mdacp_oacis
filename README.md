@@ -2,6 +2,11 @@
 
 A sample code to integrate MDACP into OACIS.
 
+## Prerequisite
+
+- Install [OACIS](https://github.com/crest-cassia/oacis)
+- Install numpy and matplotlib
+
 ## Usage
 
 1. MDACP is included as a git submodule. Clone the submodule and build MDACP.
@@ -19,5 +24,4 @@ cd mdacp
 ```
 
 3. Now you can make jobs using your OACIS.
-
 
