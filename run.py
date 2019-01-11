@@ -40,31 +40,6 @@ run_simulator("langevin.cfg", "timeseries.dat")
 
 dat = np.loadtxt("timeseries.dat", comments='#', delimiter=' ')
 
-def plot_figs(dat):
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-
-    plt.xlabel("t")
-    plt.ylabel("temperature")
-    plt.plot( dat[:,0], dat[:,1], 'o-')
-    plt.savefig("temperature_t.png")
-    plt.clf()
-
-    plt.xlabel("t")
-    plt.ylabel("pressure")
-    plt.plot( dat[:,0], dat[:,2], 'o-')
-    plt.savefig("pressure_t.png")
-    plt.clf()
-
-    plt.xlabel("t")
-    plt.ylabel("energy")
-    plt.plot( dat[:,0], dat[:,3], 'o-')
-    plt.savefig("energy_t.png")
-    plt.clf()
-
-plot_figs(dat)
-
 def print_json(dat):
     avg_t = np.average(dat[-200:,1])
     avg_p = np.average(dat[-200:,2])
